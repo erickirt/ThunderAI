@@ -17,7 +17,10 @@
  */
 
 import { prefs_default } from '../options/mzta-options-default.js';
-import { getMailHeader } from './mzta-utils.js';
+import {
+    getMailHeader,
+    sanitizeMailHeaders
+ } from './mzta-utils.js';
 
 /*  ================= PLACEHOLDERS PROPERTIES ========================================
 
@@ -509,7 +512,7 @@ export const placeholdersUtils = {
                     finalSubs['mail_folder_path'] = placeholdersUtils.failSafePlaceholders(curr_message.folder?.path);
                     break;
                 case 'mail_headers':
-                    finalSubs['mail_headers:' + currPH.custom_value] = placeholdersUtils.failSafePlaceholders(await getMailHeader(curr_message, currPH.custom_value));
+                    finalSubs['mail_headers:' + currPH.custom_value] = placeholdersUtils.failSafePlaceholders(sanitizeMailHeaders(await getMailHeader(curr_message, currPH.custom_value)));
                     break;
                 case 'selected_text':
                     finalSubs['selected_text'] = placeholdersUtils.failSafePlaceholders(selection_text);
@@ -518,13 +521,13 @@ export const placeholdersUtils = {
                     finalSubs['selected_html'] = placeholdersUtils.failSafePlaceholders(selection_html);
                     break;
                 case 'author':
-                    finalSubs['author'] = placeholdersUtils.failSafePlaceholders(curr_message.author);
+                    finalSubs['author'] = placeholdersUtils.failSafePlaceholders(sanitizeMailHeaders(curr_message.author));
                     break;
                 case 'recipients':
-                    finalSubs['recipients'] = placeholdersUtils.failSafePlaceholders(curr_message.recipients?.join(", "));
+                    finalSubs['recipients'] = placeholdersUtils.failSafePlaceholders(sanitizeMailHeaders(curr_message.recipients?.join(", ")));
                     break;
                 case 'cc_list':
-                    finalSubs['cc_list'] = placeholdersUtils.failSafePlaceholders(curr_message.ccList?.join(", "));
+                    finalSubs['cc_list'] = placeholdersUtils.failSafePlaceholders(sanitizeMailHeaders(curr_message.ccList?.join(", ")));
                     break;
                 case 'junk_score':
                     finalSubs['junk_score'] = placeholdersUtils.failSafePlaceholders(curr_message.junkScore);
