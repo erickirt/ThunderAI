@@ -1881,6 +1881,10 @@
     "message": "If checked there is no need to select some text. The full message body will be used to get the calendar event.",
     "description": ""
   },
+  "prefs_OptionText_calendar_no_selection_missing_placeholder": {
+    "message": "The prompt must contain the placeholder {%mail_text_body_or_selected%} or {%mail_html_body_or_selected%} to enable this option. Please add one of these placeholders to the prompt or reset it to the default.",
+    "description": ""
+  },
   "customPrompts_btnCopy": {
     "message": "Copy",
     "description": ""
