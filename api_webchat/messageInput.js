@@ -193,7 +193,7 @@ statusLogger.id = 'statusLogger';
 statusLogger.style.display = 'none';
 const statusLoggerImg = document.createElement('img');
 statusLoggerImg.id = 'statusLoggerImg';
-statusLoggerImg.src = browser.runtime.getURL('/popup/mzta-loading.svg');
+statusLoggerImg.src = browser.runtime.getURL('/images/mzta-loading.svg');
 statusLogger.appendChild(statusLoggerImg);
 const statusLoggerText = document.createElement('span');
 statusLoggerText.id = 'statusLoggerText';
