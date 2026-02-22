@@ -1897,6 +1897,10 @@
       "message": "Spam check in progress...",
       "description": ""
   },
+  "antispam_by": {
+    "message": "Antispam by",
+    "description": ""
+  },
   "prefs_THStats_1": {
     "message": "Do you want beautiful statistics about your emails?",
     "description": ""
