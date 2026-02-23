@@ -1427,5 +1427,11 @@
     },
     "prefs_THStats_2": {
         "message": "Klicka här! Testa ThunderStats!"
+    },
+    "antispam_by": {
+        "message": "Antispam av"
+    },
+    "prefs_OptionText_calendar_no_selection_missing_placeholder": {
+        "message": "Prompten måste innehålla platshållaren {%mail_text_body_or_selected%} eller {%mail_html_body_or_selected%} för att aktivera det här alternativet. Lägg till en av dessa platshållare i prompten eller återställ den till standard."
     }
 }
