@@ -1443,5 +1443,11 @@
     },
     "prefs_THStats_2": {
         "message": "Cliquez ici ! Essayez ThunderStats !"
+    },
+    "prefs_OptionText_calendar_no_selection_missing_placeholder": {
+        "message": "L'invite doit contenir l'espace réservé {%mail_text_body_or_selected%} ou {%mail_html_body_or_selected%} pour activer cette option. Veuillez ajouter l'un de ces espaces réservés à l'invite ou rétablir la valeur par défaut."
+    },
+    "antispam_by": {
+        "message": "Antispam par"
     }
 }
