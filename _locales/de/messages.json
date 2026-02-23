@@ -1443,5 +1443,11 @@
     },
     "prefs_THStats_2": {
         "message": "Hier klicken! Probiere ThunderStats aus!"
+    },
+    "prefs_OptionText_calendar_no_selection_missing_placeholder": {
+        "message": "Der Prompt muss den Platzhalter {%mail_text_body_or_selected%} oder {%mail_html_body_or_selected%} enthalten, um diese Option zu aktivieren. Bitte fügen Sie einen dieser Platzhalter zum Prompt hinzu oder setzen Sie ihn auf den Standardwert zurück."
+    },
+    "antispam_by": {
+        "message": "Antispam von"
     }
 }
