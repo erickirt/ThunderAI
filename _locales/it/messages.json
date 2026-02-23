@@ -1443,5 +1443,11 @@
     },
     "prefs_THStats_2": {
         "message": "Clicca qui! Prova ThunderStats!"
+    },
+    "prefs_OptionText_calendar_no_selection_missing_placeholder": {
+        "message": "Il prompt deve contenere il segnaposto {%mail_text_body_or_selected%} o {%mail_html_body_or_selected%} per abilitare questa opzione. Per favore, aggiungi uno di questi segnaposto al prompt o ripristina quello predefinito."
+    },
+    "antispam_by": {
+        "message": "Antispam di"
     }
 }
