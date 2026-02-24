@@ -4,7 +4,7 @@
 
 
 
-<h2>Version 4.0.0 - ??/??/2026</h2>
+<h2>Version 4.0.0 - 24/02/2026</h2>
       <ul>
         <li>ThunderAI is now compatible only with Thunderbird 140 and later [<a href="https://github.com/micz/ThunderAI/issues/616">#616</a>].</li>
         <li><i>[All APIs]</i> It's now possibile to define a specific API integration for calendar and task recognition [<a href="https://github.com/micz/ThunderAI/issues/498">#498</a>].</li>
@@ -24,7 +24,6 @@
         <li>Fix: Now it's possibile to use multiple <i>additional_text</i> placeholders in a single prompt, also using custom placeholders [<a href="https://github.com/micz/ThunderAI/issues/554">#554</a>].</li>
         <li>When using the <i>additional_text</i> placeholder is now possibile to specify an ID that will be shown in the form asking for the text [<a href="https://github.com/micz/ThunderAI/issues/525">#525</a>].</li>
         <li><i>[ChatGPT Web]</i> Added an option to define a custom time to wait for the page load. Sometimes, on slow PCs, the ChatGPT page loads slowly and ThunderAI inject its content too early. With this option you can adjust the waiting time [<a href="https://github.com/micz/ThunderAI/issues/634">#634</a>].</li>
-        <li>...</li>
       </ul>
 <h2>Version 3.8.5 - 22/02/2026</h2>
       <ul>
