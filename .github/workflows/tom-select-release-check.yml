@@ -2,7 +2,7 @@ name: Check Tom-Select Latest Release
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Check every day at midnight
+    - cron: '0 19 * * *' # Check every day at 19:00
   workflow_dispatch: # Allows manual triggering for testing purposes
 
 permissions:
