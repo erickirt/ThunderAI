@@ -151,7 +151,7 @@ const defaultPlaceholders = [
         default_value: "",
         type: 0,
         is_default: "1",
-        is_dynamic: "0",
+        is_dynamic: "1",
         enabled: 1,
     },
     {
@@ -267,6 +267,24 @@ const defaultPlaceholders = [
         name: "__MSG_placeholder_mail_attachments_info__",
         default_value: "",
         type: 1,
+        is_default: "1",
+        is_dynamic: "0",
+        enabled: 1,
+    },
+    {
+        id: 'mail_text_body_or_selected',
+        name: "__MSG_placeholder_mail_text_body_or_selected__",
+        default_value: "",
+        type: 0,
+        is_default: "1",
+        is_dynamic: "0",
+        enabled: 1,
+    },
+    {
+        id: 'mail_html_body_or_selected',
+        name: "__MSG_placeholder_mail_html_body_or_selected__",
+        default_value: "",
+        type: 0,
         is_default: "1",
         is_dynamic: "0",
         enabled: 1,
@@ -412,7 +430,7 @@ export const placeholdersUtils = {
             // console.log(">>>>>>>>>> replacePlaceholders match: " + JSON.stringify(match));
             // console.log(">>>>>>>>>> replacePlaceholders p1: " + JSON.stringify(p1));
             // p1 contains the key inside {% %}
-            if (skip_additional_text && (p1 === 'additional_text')) {
+            if (skip_additional_text && ((p1 === 'additional_text') || (p1.startsWith('additional_text:')))) {
                 return match;
             }
             const currPlaceholder = defaultPlaceholders.find(ph => (ph.id === p1) || (ph.is_dynamic == 1 && p1.startsWith(ph.id + ':')));
@@ -421,7 +439,7 @@ export const placeholdersUtils = {
                 return match;
             }
             // Replace if found, otherwise keep the original or substitute with default value
-            return replacements[p1] || (use_default_value ? currPlaceholder.default_value : match);
+            return replacements[p1] || replacements[currPlaceholder.id] || (use_default_value ? currPlaceholder.default_value : match);
         });
     },
 
@@ -444,7 +462,7 @@ export const placeholdersUtils = {
         // If a specific placeholder is provided, we search for it
         if (placeholder !== "") {
           // Dynamically build the regex for the specific placeholder
-          regex = new RegExp(`{%\s*${placeholder}\s*%}`);
+          regex = new RegExp(`{%\s*${placeholder}(:.*?)?\s*%}`);
         } else {
           // Otherwise, we search for any placeholder in the format {% ... %}
           regex = /{%\s*(.*?)\s*%}/;
@@ -468,6 +486,24 @@ export const placeholdersUtils = {
       
         // Check if the specific or any placeholder is present in the text
         return regex.test(text);
+    },
+
+    getPlaceholdersAdditionalTextArray(prompt_text){
+        const regex = /{%\s*additional_text(?::(.*?))?\s*%}/g;
+        let matches = [];
+        let match;
+        let foundIds = new Set();
+        while ((match = regex.exec(prompt_text)) !== null) {
+            let info = match[1] ? match[1].trim() : "";
+            if (!foundIds.has(info)) {
+                foundIds.add(info);
+                matches.push({
+                    placeholder: match[0],
+                    info: info
+                });
+            }
+        }
+        return matches;
     },
 
     async getPlaceholdersValues(args) {
@@ -519,6 +555,12 @@ export const placeholdersUtils = {
                     break;
                 case 'selected_html':
                     finalSubs['selected_html'] = placeholdersUtils.failSafePlaceholders(selection_html);
+                    break;
+                case 'mail_text_body_or_selected':
+                    finalSubs['mail_text_body_or_selected'] = placeholdersUtils.failSafePlaceholders(selection_text || body_text);
+                    break;
+                case 'mail_html_body_or_selected':
+                    finalSubs['mail_html_body_or_selected'] = placeholdersUtils.failSafePlaceholders(selection_html || msg_text?.html);
                     break;
                 case 'author':
                     finalSubs['author'] = placeholdersUtils.failSafePlaceholders(sanitizeMailHeaders(curr_message.author));

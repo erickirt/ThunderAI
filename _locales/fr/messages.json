@@ -327,9 +327,6 @@
     "chagpt_api_send_button": {
         "message": "Utilisation du modèle"
     },
-    "chagpt_api_connecting": {
-        "message": "Tentative de connexion à OpenAI ChatGPT en utilisant la clé API fournie"
-    },
     "Debug": {
         "message": "Debug"
     },
@@ -363,12 +360,6 @@
     "ollama_empty_model": {
         "message": "Vous n'avez pas choisi de modèle pour l'API Ollama. Veuillez en choisir un sur la page des options."
     },
-    "ollama_api_connecting": {
-        "message": "Tentative de connexion au serveur local Ollama en utilisant l'hôte"
-    },
-    "andModel": {
-        "message": "et le modèle"
-    },
     "error_connection_interrupted": {
         "message": "La connexion au serveur a été interrompue de manière inattendue"
     },
@@ -398,9 +389,6 @@
     },
     "OpenAIComp_empty_model": {
         "message": "Vous n'avez pas choisi de modèle pour l'API compatible OpenAI. Veuillez en choisir un dans la page des options."
-    },
-    "OpenAIComp_api_connecting": {
-        "message": "Tentative de connexion au serveur local de l'API compatible OpenAI en utilisant l'hôte"
     },
     "OpenAIComp_api_request_failed": {
         "message": "La requête de l'API compatible OpenAI a échoué"
@@ -681,9 +669,6 @@
     "google_gemini_api_request_failed": {
         "message": "La requête API Google Gemini a échoué"
     },
-    "google_gemini_api_connecting": {
-        "message": "Tentative de connexion à Google Gemini en utilisant la clé API fournie"
-    },
     "google_gemini_empty_apikey": {
         "message": "Vous n'avez pas ajouté de clé API pour l'API Google Gemini. Veuillez en insérer une dans la page des options."
     },
@@ -712,7 +697,7 @@
         "message": "Ajouter un nouvel événement au calendrier"
     },
     "prompt_get_calendar_event_full_text": {
-        "message": "Extrayez tous les détails pertinents nécessaires pour générer un événement de calendrier à partir du texte suivant. Les informations extraites doivent inclure :\n- Titre de l'événement\n- Date et heure de début (y compris le fuseau horaire, si spécifié)\n- Date et heure de fin (y compris le fuseau horaire, si spécifié)\n- Journée entière (si mentionnée)\n- Participants\nAssurez-vous que les données sont formatées clairement et de manière cohérente afin qu'elles puissent être utilisées directement pour créer un événement de calendrier.\nS'il y a des références temporelles relatives, considérez que la date et l'heure de l'email sont \"{%mail_datetime%}\". Calculez la date et l'heure de début sur cette base. Si la date et l'heure de début calculées sont antérieures à \"{%current_datetime%}\", recalculez-les en utilisant \"{%current_datetime%}\" comme base.\nSi la durée n'est pas spécifiée, définissez-la sur une heure.\nVoici les participants : {%author%}, {%recipients%}, {%cc_list%}. Si elle est présente, exclure mon adresse : {%account_email_address%}.\nSi vous n'êtes pas en mesure d'obtenir une ou plusieurs des informations requises, répondez avec une chaîne vide.\nGénérez une réponse uniquement au format JSON. N'incluez aucun texte ou explication supplémentaire ; fournissez uniquement le JSON. Voici le format à utiliser :\n{\n\"startDate\" : \"YYYYMMDDTHHMMSS\",\n\"endDate\" : \"YYYYMMDDTHHMMSS\",\n\"summary\" : \"Résumé de l'événement du calendrier ici\",\n\"forceAllDay\" : false\n\"attendees\" : [attendee1@example.com,attendee2@example.com,attendee3@example.com]\n}\nVoici le texte : \"{%selected_text%}\""
+        "message": "Extrayez tous les détails pertinents nécessaires pour générer un événement de calendrier à partir du texte suivant. Les informations extraites doivent inclure :\n- Titre de l'événement\n- Date et heure de début (y compris le fuseau horaire, si spécifié)\n- Date et heure de fin (y compris le fuseau horaire, si spécifié)\n- Journée entière (si mentionnée)\n- Participants\nAssurez-vous que les données sont formatées clairement et de manière cohérente afin qu'elles puissent être utilisées directement pour créer un événement de calendrier.\nS'il y a des références temporelles relatives, considérez que la date et l'heure de l'email sont \"{%mail_datetime%}\". Calculez la date et l'heure de début sur cette base. Si la date et l'heure de début calculées sont antérieures à \"{%current_datetime%}\", recalculez-les en utilisant \"{%current_datetime%}\" comme base.\nSi la durée n'est pas spécifiée, définissez-la sur une heure.\nVoici les participants : {%author%}, {%recipients%}, {%cc_list%}. Si elle est présente, exclure mon adresse : {%account_email_address%}.\nSi vous n'êtes pas en mesure d'obtenir une ou plusieurs des informations requises, répondez avec une chaîne vide.\nGénérez une réponse uniquement au format JSON. N'incluez aucun texte ou explication supplémentaire ; fournissez uniquement le JSON. Voici le format à utiliser :\n{\n\"startDate\" : \"YYYYMMDDTHHMMSS\",\n\"endDate\" : \"YYYYMMDDTHHMMSS\",\n\"summary\" : \"Résumé de l'événement du calendrier ici\",\n\"forceAllDay\" : false\n\"attendees\" : [attendee1@example.com,attendee2@example.com,attendee3@example.com]\n}\nVoici le texte : \"{%mail_text_body_or_selected%}\""
     },
     "prefs_OptionText_get_calendar_event": {
         "message": "Ajouter un nouvel événement au calendrier à partir du texte sélectionné"
@@ -792,7 +777,7 @@
     "Moved_to_Spam": {
         "message": "Déplacé dans le spam"
     },
-    "spamfilter_not_moved": {
+    "no_string": {
         "message": "Non"
     },
     "spamfilter_no_reports": {
@@ -800,9 +785,6 @@
     },
     "SpamFilter_PageTitle": {
         "message": "Gérer les paramètres du filtre anti-spam"
-    },
-    "sparks_not_installed": {
-        "message": "ThunderAI Sparks non installé !"
     },
     "SpamFilter_info_default": {
         "message": "Sur cette page, vous pouvez modifier l'invite par défaut utilisée pour détecter les e-mails indésirables."
@@ -816,7 +798,7 @@
     "SpamReport_Title": {
         "message": "Rapports du filtre anti-spam"
     },
-    "spamfilter_moved": {
+    "yes_string": {
         "message": "Oui"
     },
     "prefs_OptionText_add_tags_auto_Info": {
@@ -858,12 +840,6 @@
     "context_menu_mzta-add-tags": {
         "message": "Ajouter des étiquettes"
     },
-    "prefs_OptionText_spamfilter_context_menu": {
-        "message": "Afficher l'option \"Analyser comme spam\" dans le menu contextuel"
-    },
-    "prefs_OptionText_spamfilter_context_menu_Info": {
-        "message": "Si coché, l'option \"Analyser comme spam\" apparaîtra lors d’un clic droit sur un e-mail dans la liste des messages."
-    },
     "noActiveCalendar": {
         "message": "Aucun calendrier modifiable trouvé !"
     },
@@ -879,9 +855,6 @@
     "prefs_OptionText_calendar_enforce_timezone": {
         "message": "Forcer le fuseau horaire spécifié"
     },
-    "prefs_OptionText_add_tags_context_menu_Info": {
-        "message": "Si coché, l'option \"Ajouter des étiquettes\" apparaîtra lors d’un clic droit sur un e-mail dans la liste des messages."
-    },
     "chatgpt_win_diff_title": {
         "message": "Différences entre le texte original et le texte modifié"
     },
@@ -896,9 +869,6 @@
     },
     "apiwebchat_error": {
         "message": "Erreur"
-    },
-    "prefs_OptionText_add_tags_context_menu": {
-        "message": "Afficher l'option \"Ajouter des étiquettes\" dans le menu contextuel"
     },
     "apiwebchat_use_this_answer": {
         "message": "Utiliser cette réponse"
@@ -929,12 +899,6 @@
     },
     "CORS_alternative_1": {
         "message": "Des problèmes pour configurer le CORS ?"
-    },
-    "CORS_alternative_2": {
-        "message": "Appuie sur le bouton ci-dessous pour accorder la permission <all_urls> afin d'éviter tout problème lié au CORS."
-    },
-    "CORS_give_allurls_perm": {
-        "message": "Accorde la permission \"tous les URLs\""
     },
     "remember_CORS": {
         "message": "N'oublie pas, tu dois configurer les paramètres CORS sur le serveur !"
@@ -1338,5 +1302,152 @@
     },
     "reset": {
         "message": "Réinitialiser"
+    },
+    "placeholder_mail_text_body_or_selected": {
+        "message": "Corps de l'e-mail ou texte sélectionné"
+    },
+    "placeholder_mail_html_body_or_selected": {
+        "message": "Corps de l'e-mail ou HTML sélectionné"
+    },
+    "prefs_OptionText_chatgpt_web_load_wait_time": {
+        "message": "Délai d'attente pour le chargement de la page"
+    },
+    "prefs_OptionText_chatgpt_web_load_wait_time_info": {
+        "message": "Temps en millisecondes à attendre pour le chargement de la page ChatGPT avant de charger le contenu supplémentaire. La valeur par défaut est 1000ms. Si un GPT personnalisé ou un Projet est défini, 1000ms supplémentaires seront ajoutés à cette valeur."
+    },
+    "prompt_get_calendar_event_from_clipboard": {
+        "message": "Ajouter un événement de calendrier depuis le presse-papiers"
+    },
+    "clipboard_read_error": {
+        "message": "Impossible de lire le presse-papiers. Veuillez vérifier les autorisations."
+    },
+    "clipboard_empty_error": {
+        "message": "Le presse-papiers est vide. Veuillez d'abord copier du texte."
+    },
+    "clipboard_permission_denied": {
+        "message": "L'autorisation d'accès au presse-papiers a été refusée. Veuillez réactiver la fonctionnalité dans les paramètres per accorder l'autorisation."
+    },
+    "clipboard_permission_error": {
+        "message": "Erreur lors de la demande d'autorisation du presse-papiers. Veuillez réessayer."
+    },
+    "prefs_OptionText_get_calendar_event_from_clipboard": {
+        "message": "Obtenir l'événement de calendrier depuis le presse-papiers"
+    },
+    "prefs_OptionText_get_calendar_event_from_clipboard_Info": {
+        "message": "Afficher un élément de menu supplémentaire pour créer des événements de calendrier à partir du contenu textuel du presse-papiers."
+    },
+    "Summarize_prompt_prefs_title": {
+        "message": "Options de résumé"
+    },
+    "prompt_summarize": {
+        "message": "Résumer cet e-mail ou ces e-mails"
+    },
+    "prompt_summarize_full_text": {
+        "message": "Vous êtes un assistant qui résume les conversations par e-mail.\n\nÀ partir d'un fil de discussion, produisez un résumé concis et précis qui capture :\n\n- Le sujet principal ou l'objet de la conversation.\n- Les décisions clés, conclusions ou accords.\n- Les questions importantes, requêtes ou points à traiter.\n- Le responsable de chaque action à entreprendre (si précisé).\n\nOmettez les salutations, les signatures, le texte cité et les échanges redondants.\nN'ajoutez pas d'hypothèses ou d'informations non présentes dans les e-mails.\n\nRédigez le résumé dans un langage clair et neutre, adapté à un professionnel occupé."
+    },
+    "prompt_summarize_email_template": {
+        "message": "Résumé du modèle d'e-mail"
+    },
+    "prompt_summarize_email_template_full_text": {
+        "message": "De : {%author%}\nÀ : {%recipients%}\nCopie : {%cc_list%}\nObjet : {%mail_subject%}\nDate : {%mail_datetime%}\nPièces jointes :\n{%mail_attachments_info%}\n\nCorps du message :\n{%mail_text_body%}"
+    },
+    "prompt_summarize_email_separator": {
+        "message": "Séparateur d'e-mail"
+    },
+    "prompt_summarize_email_separator_full_text": {
+        "message": "\n\n---------- E-MAIL SUIVANTE ----------\n\n"
+    },
+    "prefs_OptionText_Summarize_infoline2": {
+        "message": "Vous pouvez modifier l’instruction (prompt) comme vous le souhaitez : le premier champ est l’instruction principale, le deuxième est le modèle pour un e-mail individuel. La liste des e-mails sera ajoutée à la suite de l’instruction principale. Les e-mails seront séparés par le séparateur spécifié dans le troisième champ."
+    },
+    "prefs_OptionText_Summarize_main_prompt": {
+        "message": "L'instruction principale décrivant la tâche à effectuer sur tous les e-mails sélectionnés :"
+    },
+    "prefs_OptionText_Summarize_email_template": {
+        "message": "Le modèle pour un e-mail unique :"
+    },
+    "prefs_OptionText_Summarize_email_separator": {
+        "message": "Le séparateur entre les e-mails :"
+    },
+    "prefs_OptionText_get_calendar_event_use_specific_integration_Info": {
+        "message": "Si coché, le Modèle et l'API spécifiés ci-dessous seront utilisés pour créer des événements de calendrier, quel que soit celui choisi dans la page des options de ThunderAI."
+    },
+    "prefs_OptionText_summarize": {
+        "message": "Résumer l'e-mail"
+    },
+    "prefs_OptionText_summarize_use_specific_integration_Info": {
+        "message": "Si coché, le Modèle et l'API spécifiés ci-dessous seront utilisés pour résumer les e-mails, quel que soit celui choisi dans la page des options de ThunderAI."
+    },
+    "prefs_OptionText_summarize_Info": {
+        "message": "Si coché, ajoute une option au menu contextuel pour résumer l'e-mail."
+    },
+    "prefs_OptionText_btnManageSummarizeInfo": {
+        "message": "Gérer les paramètres de résumé"
+    },
+    "Summarize_PageTitle": {
+        "message": "Gestion des paramètres de résumé"
+    },
+    "Summarize_info_default": {
+        "message": "Sur cette page, vous pouvez modifier le prompt par défaut utilisé pour résumer les e-mails."
+    },
+    "Summarize_prompt_text_title": {
+        "message": "Texte actuel du prompt"
+    },
+    "prefs_OptionText_spamfilter_show_msg_panel": {
+        "message": "Afficher le panneau de rapport de spam"
+    },
+    "prefs_OptionText_spamfilter_show_msg_panel_Info": {
+        "message": "Si coché, un panneau avec le rapport de spam s'affichera au-dessus du message."
+    },
+    "SpamReport_infoline": {
+        "message": "Ces informations ne sont enregistrées que pour la session en cours."
+    },
+    "Spam": {
+        "message": "Indésirables"
+    },
+    "Valid": {
+        "message": "Valide"
+    },
+    "context_menu_mzta-summarize": {
+        "message": "Résumer"
+    },
+    "CORS_alternative_2_new": {
+        "message": "Appuyez sur le bouton ci-dessous pour donner l'autorisation à l'hôte actuel afin d'éviter tout problème CORS."
+    },
+    "CORS_give_host_perm": {
+        "message": "Donner l'autorisation à l'hôte actuel"
+    },
+    "CORS_localhost_warn": {
+        "message": "Si vous utilisez localhost ou 127.0.0.1 parce que le serveur d'IA est hébergé sur votre PC, l'autorisation <all_urls> est requise."
+    },
+    "customPrompts_export_include_api_settings": {
+        "message": "Voulez-vous inclure les paramètres API dans l'exportation ? Attention, la clé API sera également enregistrée dans le fichier !"
+    },
+    "prefs_OptionText_calendar_no_selection": {
+        "message": "Ne pas demander de sélectionner du texte"
+    },
+    "prefs_OptionText_calendar_no_selection_Info": {
+        "message": "Si coché, il n'est pas nécessaire de sélectionner du texte. Le corps complet du message sera utilisé pour créer l'événement de calendrier."
+    },
+    "spam_check_in_progress": {
+        "message": "Analyse antispam en cours..."
+    },
+    "customPrompts_btnCopy": {
+        "message": "Copier"
+    },
+    "copy_text": {
+        "message": "copie"
+    },
+    "prefs_THStats_1": {
+        "message": "Voulez-vous de belles statistiques sur vos e-mails ?"
+    },
+    "prefs_THStats_2": {
+        "message": "Cliquez ici ! Essayez ThunderStats !"
+    },
+    "prefs_OptionText_calendar_no_selection_missing_placeholder": {
+        "message": "L'invite doit contenir l'espace réservé {%mail_text_body_or_selected%} ou {%mail_html_body_or_selected%} pour activer cette option. Veuillez ajouter l'un de ces espaces réservés à l'invite ou rétablir la valeur par défaut."
+    },
+    "antispam_by": {
+        "message": "Antispam par"
     }
 }
