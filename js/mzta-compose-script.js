@@ -688,7 +688,7 @@ switch (message.command) {
     if (data.spamValue == -999) {
         scoreText.textContent = browser.i18n.getMessage("apiwebchat_error");
     } else {
-        scoreText.textContent = ((data.spamValue >= (data.SpamThreshold || 50)) ? browser.i18n.getMessage("Spam") : browser.i18n.getMessage("Valid")) + " [" + data.spamValue + "/100]";
+        scoreText.textContent = ((data.spamValue >= (data.SpamThreshold || 50)) ? "⚠️ " + browser.i18n.getMessage("Spam") : "🛡️ " + browser.i18n.getMessage("Valid")) + " [" + data.spamValue + "/100]";
     }
     
     const reasonText = document.createElement('span');
