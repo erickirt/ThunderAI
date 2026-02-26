@@ -45,7 +45,7 @@ jobs:
           # Crea o aggiorna la branch PR
           git checkout -B "$PR_BRANCH"
           git add -A
-          git commit -m "chore: update vendor files from VENDORS.md"
+          git commit -m "Update Tom Select files from VENDORS.md"
           git push origin "$PR_BRANCH" --force
 
           echo "has_changes=true" >> $GITHUB_OUTPUT
@@ -63,8 +63,8 @@ jobs:
             -H "X-GitHub-Api-Version: 2022-11-28" \
             https://api.github.com/repos/${{ github.repository }}/pulls \
             -d "{
-              \"title\": \"chore: update vendor files from VENDORS.md\",
-              \"body\": \"Vendor files updated automatically after a change to \`VENDORS.md\`.\n\nPlease review the downloaded files before merging.\",
+              \"title\": \"Update Tom Select files from VENDORS.md\",
+              \"body\": \"Tom Select files updated automatically after a change to \`VENDORS.md\`.\n\nPlease review the downloaded files before merging.\",
               \"head\": \"${{ steps.commit.outputs.pr_branch }}\",
               \"base\": \"${{ steps.commit.outputs.base_branch }}\"
             }")
