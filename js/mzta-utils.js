@@ -220,7 +220,7 @@ export function sanitizeHtml(input) {
 }
 
 export function sanitizeMailHeaders(input){
-  console.log(">>>>>>>>>>>> sanitizeMailHeaders input: " + JSON.stringify(input));
+  // console.log(">>>>>>>>>>>> sanitizeMailHeaders input: " + JSON.stringify(input));
   if(!input) return '';
   return input.replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
