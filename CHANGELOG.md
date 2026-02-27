@@ -3,7 +3,10 @@
 
 
 
-
+<h2>Version 4.0.1 - 27/02/2026</h2>
+      <ul>
+        <li>Fix: Correctly handling additional text without a placeholder [<a href="https://github.com/micz/ThunderAI/issues/681">#681</a>].</li>
+      </ul>
 <h2>Version 4.0.0 - 24/02/2026</h2>
       <ul>
         <li>ThunderAI is now compatible only with Thunderbird 140 and later [<a href="https://github.com/micz/ThunderAI/issues/616">#616</a>].</li>
